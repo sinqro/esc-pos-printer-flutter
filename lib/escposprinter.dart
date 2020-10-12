@@ -28,8 +28,8 @@ class Escposprinter {
     return returned;
   }
 
-  static Future<bool> printRawData(String text) async {
-    Map<String, dynamic> params = {"text": text};
+  static Future<bool> printRawData(String rawString) async {
+    Map<String, dynamic> params = {"raw": rawString};
     final bool returned = await _channel.invokeMethod('printRawData', params);
     return returned;
   }
